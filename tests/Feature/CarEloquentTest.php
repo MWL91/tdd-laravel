@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-// use Illuminate\Foundation\Testing\RefreshDatabase;
+ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Money\Currency;
 use Money\Money;
 use Mwl91\Tdd\Domain\Car;
@@ -16,6 +16,8 @@ use Tests\TestCase;
 
 class CarEloquentTest extends TestCase
 {
+    use RefreshDatabase;
+
     public function testCanCreateCar(): void
     {
         // Given:

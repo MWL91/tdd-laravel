@@ -10,6 +10,8 @@ class Car extends Model
 {
     use HasFactory;
 
+    protected $keyType = 'string';
+
     protected $fillable = [
         'id',
         'class',

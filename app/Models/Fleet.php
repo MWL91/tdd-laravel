@@ -10,6 +10,8 @@ class Fleet extends Model
 {
     use HasFactory;
 
+    protected $keyType = 'string';
+
     protected $fillable = [
         'id',
         'insurance_cost',
@@ -23,6 +25,6 @@ class Fleet extends Model
 
     public function cars(): HasMany
     {
-        return $this->hasMany(Car::class);
+        return $this->hasMany(Car::class, 'fleet_id', 'id');
     }
 }
