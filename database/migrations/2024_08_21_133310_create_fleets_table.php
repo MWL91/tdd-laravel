@@ -16,10 +16,10 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->decimal('insurance_cost', 5, 2)->default(0);
             $table->integer('caution_percent')->default(0);
-            $table->decimal('officePickupCost', 5, 2)->default(0);
-            $table->decimal('airportPickupCost', 5, 2)->default(0);
-            $table->decimal('addressPickupCost', 5, 2)->default(0);
-            $table->decimal('overtimePickupCost', 5, 2)->default(0);
+            $table->decimal('office_pickup_cost', 5, 2)->default(0);
+            $table->decimal('airport_pickup_cost', 5, 2)->default(0);
+            $table->decimal('address_pickup_cost', 5, 2)->default(0);
+            $table->decimal('overtime_pickup_cost', 5, 2)->default(0);
             $table->string('currency');
             $table->timestamps();
         });
